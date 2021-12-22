@@ -1,14 +1,14 @@
 import boto3
 #Creating bucket
 s3 = boto3.client('s3', region_name = 'us-east-1')
-s3.create_bucket(Bucket = 'Bucket-Name')
-bucket_name = 'Bucket-Name'
+s3.create_bucket(Bucket = 'XXXXXXXXXX')
+bucket_name = 'XXXXXXXXXXXX'
 #Policy json file
 policy_file = open('./s3policy.json', 'r')
 
 #setup bucket policy
 s3.put_bucket_policy(
-    Bucket = 'Bucket-Name',
+    Bucket = 'XXXXXXXXXXXXX',
     Policy = policy_file.read()
 )
 #Uploading data to bucket
